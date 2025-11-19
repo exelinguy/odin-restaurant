@@ -1,3 +1,6 @@
+# Include dist folder as per instructions
+dist/
+
 # Logs
 logs
 *.log
