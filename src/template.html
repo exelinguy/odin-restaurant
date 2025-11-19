@@ -11,6 +11,19 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap"
       rel="stylesheet"
     />
+    <!-- FIX: Adding inline style to prevent the white flash (FOUC - Flash of Unstyled Content) -->
+    <style>
+      body {
+        background-color: #2e3440; /* Match --bg-color from style.css */
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      body.loaded {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
     <header>

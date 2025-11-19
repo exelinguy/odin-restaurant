@@ -47,3 +47,6 @@ function component() {
 
 // Run the function
 component();
+
+// FIX: Add a class to the body after the JS has run and injected CSS
+document.body.classList.add("loaded");
