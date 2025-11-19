@@ -49,4 +49,6 @@ function component() {
 component();
 
 // FIX: Add a class to the body after the JS has run and injected CSS
-document.body.classList.add("loaded");
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("loaded");
+});
