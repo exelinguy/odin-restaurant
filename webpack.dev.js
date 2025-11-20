@@ -14,12 +14,11 @@ module.exports = merge(common, {
   devtool: "eval-source-map",
   devServer: {
     watchFiles: ["./src/template.html"],
-    static: "./dist",
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
-      favicon: "./src/assets/favicon.png",
+      // favicon: "./src/assets/favicon.png",
     }),
   ],
   module: {
