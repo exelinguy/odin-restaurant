@@ -1,8 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { merge } = require("webpack-merge");
+const common = require("./webpack.common.js");
 
-module.exports = {
-  mode: "development",
+module.exports = merge(common, {
+  mode: "production",
   entry: "./src/index.js",
   output: {
     filename: "main.js",
@@ -16,7 +18,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
-      favicon: "./src/assets/odin-icon.svg",
     }),
   ],
   module: {
@@ -35,4 +36,4 @@ module.exports = {
       },
     ],
   },
-};
+});
